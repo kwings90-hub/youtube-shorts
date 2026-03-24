@@ -14,10 +14,10 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from googleapiclient.errors import HttpError
 
-PROJ_DIR = Path(__file__).parent
-CLIENT_SECRET_A = PROJ_DIR / "client_secret.json"
-CLIENT_SECRET_B = PROJ_DIR / "client_secret_B.json"
-TOKEN_DIR = PROJ_DIR / "youtube_auth"
+PROJ_DIR = Path(__file__).parent.parent  # src/ → 프로젝트 루트
+CLIENT_SECRET_A = PROJ_DIR / "config" / "client_secret.json"
+CLIENT_SECRET_B = PROJ_DIR / "config" / "client_secret_B.json"
+TOKEN_DIR = PROJ_DIR / "config" / "youtube_auth"
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
           "https://www.googleapis.com/auth/youtube.readonly"]

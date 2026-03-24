@@ -223,7 +223,7 @@ def save_output(results, output_dir=None):
     from pathlib import Path
 
     if output_dir is None:
-        output_dir = Path(__file__).parent / "output"
+        output_dir = Path(__file__).parent.parent / "data" / "output"
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 

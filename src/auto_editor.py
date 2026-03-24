@@ -21,9 +21,9 @@ import numpy as np
 # ============================================================
 # 설정
 # ============================================================
-BASE_DIR = Path(__file__).parent / "original_source"
-OUTPUT_DIR = Path(__file__).parent / "output"
-TEMP_DIR = Path(__file__).parent / "temp"
+BASE_DIR = Path(__file__).parent.parent / "data" / "original_source"
+OUTPUT_DIR = Path(__file__).parent.parent / "data" / "output"
+TEMP_DIR = Path(__file__).parent.parent / "data" / "temp"
 
 # 영상 설정
 WIDTH = 1080

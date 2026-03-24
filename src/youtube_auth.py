@@ -12,10 +12,10 @@ from google.oauth2.credentials import Credentials
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 
-PROJ_DIR = Path(__file__).parent
-CLIENT_SECRET_A = PROJ_DIR / "client_secret.json"    # 계정A: 이슈킥, 찌라핫, 가쉽온, 팩톡
-CLIENT_SECRET_B = PROJ_DIR / "client_secret_B.json"   # 계정B: 핫찌, 뉴썰, 핫팩트, 핫이슈랩
-TOKEN_DIR = PROJ_DIR / "youtube_auth"
+PROJ_DIR = Path(__file__).parent.parent  # src/ → 프로젝트 루트
+CLIENT_SECRET_A = PROJ_DIR / "config" / "client_secret.json"    # 계정A: 이슈킥, 찌라핫, 가쉽온, 팩톡
+CLIENT_SECRET_B = PROJ_DIR / "config" / "client_secret_B.json"   # 계정B: 핫찌, 뉴썰, 핫팩트, 핫이슈랩
+TOKEN_DIR = PROJ_DIR / "config" / "youtube_auth"
 
 SCOPES = ["https://www.googleapis.com/auth/youtube.upload",
           "https://www.googleapis.com/auth/youtube.readonly"]

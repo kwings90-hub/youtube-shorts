@@ -23,11 +23,11 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 500 * 1024 * 1024  # 500MB
 
 # 경로
-PROJ_DIR = Path(__file__).parent
-BASE_DIR = PROJ_DIR / "original_source"
-OUTPUT_DIR = PROJ_DIR / "output"
+PROJ_DIR = Path(__file__).parent.parent  # src/ → 프로젝트 루트
+BASE_DIR = PROJ_DIR / "data" / "original_source"
+OUTPUT_DIR = PROJ_DIR / "data" / "output"
 CHANNEL_DIR = BASE_DIR / "Channel"
-SESSIONS_DIR = PROJ_DIR / "sessions"
+SESSIONS_DIR = PROJ_DIR / "data" / "sessions"
 
 # ============================================================
 # 세션 관리 (업로드 파일 격리)
